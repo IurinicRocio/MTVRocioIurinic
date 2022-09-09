@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head> <p style="size: 5cm;color: black">Padres </p>
+
+<body>
+<p>
+    {% for padre in padres %}
+        {%if padre.sexo == 'F'%}
+            <p style= "color: rgb(207, 118, 173)">
+            Nombre: {{padre.nombre}} <br>
+            Apellido: {{padre.apellido}} <br>
+            Fecha de Nacimiento: {{padre.fechaNac}} <br>
+            DNI: {{padre.dni}} <br>
+            <br><br></p>
+        {% else %}
+            <p style= "color: blue">
+            Nombre: {{padre.nombre}} <br>
+            Apellido: {{padre.apellido}} <br>
+            Fecha de Nacimiento: {{padre.fechaNac}} <br>
+            DNI: {{padre.dni}} <br>
+            <br><br>
+        {% endif %}
+    {% endfor %}
+<p>    
+</body>
+</html>
